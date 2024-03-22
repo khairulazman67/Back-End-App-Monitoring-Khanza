@@ -1,0 +1,27 @@
+{
+  "name": "back-end-app-direktur-khanza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -w",
+    "start": "node build/index.js",
+    "dev": "nodemon ./build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "@types/http-errors": "^2.0.4",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "express": "^4.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
