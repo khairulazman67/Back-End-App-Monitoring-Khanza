@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+    L
+    P
+}
+
+model dokter {
+  kd_dokter                                                                            String                                       @id @default(cuid()) @db.VarChar(20)
+  nm_dokter                                                                            String?                                      @db.VarChar(50)
+  jk                                                                                   Role
+  tmp_lahir                                                                            String?                                      @db.VarChar(20)
+  tgl_lahir                                                                            DateTime?                                    @db.Date
+  agama                                                                                String?                                      @db.VarChar(12)
+  almt_tgl                                                                             String?                                      @db.VarChar(60)
+  no_telp                                                                              String?                                      @db.VarChar(13)
+  kd_sps                                                                               String?                                      @db.Char(5)
+  alumni                                                                               String?                                      @db.VarChar(60)
+  no_ijn_praktek                                                                       String?                                      @db.VarChar(120)
+}
